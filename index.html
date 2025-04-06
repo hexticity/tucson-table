@@ -261,7 +261,11 @@
       </div>
     </div>
 
+
     <form id="survey-form" action="https://formspree.io/f/xkgjpgwp" method="POST">
+      <!-- Honeypot field to prevent spam -->
+      <input type="text" name="_gotcha" style="display:none">
+      
       <div class="question active" id="q1-container">
         <label for="q1">What's the hardest part about planning meals for your family right now?</label>
         <textarea id="q1" name="challenge" rows="3" placeholder="E.g., Finding time, deciding what to cook, staying on budget..." required></textarea>
