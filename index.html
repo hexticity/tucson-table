@@ -262,85 +262,87 @@
     </div>
 
 
-    <form id="survey-form" action="https://formspree.io/f/xkgjpgwp" method="POST">
-      <!-- Honeypot field to prevent spam -->
-      <input type="text" name="_gotcha" style="display:none">
-      
-      <div class="question active" id="q1-container">
-        <label for="q1">What's the hardest part about planning meals for your family right now?</label>
-        <textarea id="q1" name="challenge" rows="3" placeholder="E.g., Finding time, deciding what to cook, staying on budget..." required></textarea>
-        <div class="btn-container">
-          <div></div> <!-- Empty div for spacing -->
-          <button type="button" class="btn btn-next" onclick="nextQuestion(1)">Next &rarr;</button>
-        </div>
-      </div>
+<form id="survey-form" action="https://formspree.io/f/xkgjpgwp" method="POST">
+  <!-- Honeypot spam protection -->
+  <input type="text" name="_gotcha" style="display:none">
 
-      <div class="question" id="q2-container">
-        <label for="q2">How do you currently handle groceries and meal planning?</label>
-        <textarea id="q2" name="current_method" rows="3" placeholder="E.g., Weekly shopping list, meal prep on Sundays..." required></textarea>
-        <div class="btn-container">
-          <button type="button" class="btn btn-prev" onclick="prevQuestion(2)">&larr; Back</button>
-          <button type="button" class="btn btn-next" onclick="nextQuestion(2)">Next &rarr;</button>
-        </div>
-      </div>
+  <div class="question active" id="q1-container">
+    <label for="q1">What's the hardest part about planning meals for your family right now?</label>
+    <textarea id="q1" name="challenge" rows="3" placeholder="E.g., Finding time, deciding what to cook, staying on budget..." required></textarea>
+    <div class="btn-container">
+      <div></div>
+      <button type="button" class="btn btn-next" onclick="nextQuestion(1)">Next &rarr;</button>
+    </div>
+  </div>
 
-      <div class="question" id="q3-container">
-        <label>Would a weekly meal plan + grocery list (customized for your budget and store) help you?</label>
-        <div class="radio-options">
-          <div class="radio-option">
-            <input type="radio" id="q3-yes" name="would_help" value="Yes" required>
-            <label for="q3-yes">Yes, definitely!</label>
-          </div>
-          <div class="radio-option">
-            <input type="radio" id="q3-maybe" name="would_help" value="Maybe">
-            <label for="q3-maybe">Maybe</label>
-          </div>
-          <div class="radio-option">
-            <input type="radio" id="q3-no" name="would_help" value="No">
-            <label for="q3-no">No</label>
-          </div>
-        </div>
-        <div class="btn-container">
-          <button type="button" class="btn btn-prev" onclick="prevQuestion(3)">&larr; Back</button>
-          <button type="button" class="btn btn-next" onclick="nextQuestion(3)">Next &rarr;</button>
-        </div>
-      </div>
+  <div class="question" id="q2-container">
+    <label for="q2">How do you currently handle groceries and meal planning?</label>
+    <textarea id="q2" name="current_method" rows="3" placeholder="E.g., Weekly shopping list, meal prep on Sundays..." required></textarea>
+    <div class="btn-container">
+      <button type="button" class="btn btn-prev" onclick="prevQuestion(2)">&larr; Back</button>
+      <button type="button" class="btn btn-next" onclick="nextQuestion(2)">Next &rarr;</button>
+    </div>
+  </div>
 
-      <div class="question" id="q4-container">
-        <label>How much would you realistically pay for this per month?</label>
-        <div class="radio-options">
-          <div class="radio-option">
-            <input type="radio" id="q4-free" name="price_point" value="$0 (free only)" required>
-            <label for="q4-free">$0 (free only)</label>
-          </div>
-          <div class="radio-option">
-            <input type="radio" id="q4-5" name="price_point" value="$5">
-            <label for="q4-5">$5/month</label>
-          </div>
-          <div class="radio-option">
-            <input type="radio" id="q4-10" name="price_point" value="$10">
-            <label for="q4-10">$10/month</label>
-          </div>
-          <div class="radio-option">
-            <input type="radio" id="q4-15" name="price_point" value="$15+">
-            <label for="q4-15">$15+/month</label>
-          </div>
-        </div>
-        <div class="btn-container">
-          <button type="button" class="btn btn-prev" onclick="prevQuestion(4)">&larr; Back</button>
-          <button type="button" class="btn btn-next" onclick="nextQuestion(4)">Next &rarr;</button>
-        </div>
+  <div class="question" id="q3-container">
+    <label>Would a weekly meal plan + grocery list (customized for your budget and store) help you?</label>
+    <div class="radio-options">
+      <div class="radio-option">
+        <input type="radio" id="q3-yes" name="would_help" value="Yes" required>
+        <label for="q3-yes">Yes, definitely!</label>
       </div>
+      <div class="radio-option">
+        <input type="radio" id="q3-maybe" name="would_help" value="Maybe">
+        <label for="q3-maybe">Maybe</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" id="q3-no" name="would_help" value="No">
+        <label for="q3-no">No</label>
+      </div>
+    </div>
+    <div class="btn-container">
+      <button type="button" class="btn btn-prev" onclick="prevQuestion(3)">&larr; Back</button>
+      <button type="button" class="btn btn-next" onclick="nextQuestion(3)">Next &rarr;</button>
+    </div>
+  </div>
 
-      <div class="question" id="q5-container">
-        <label for="q5">Want free early access? Drop your email:</label>
-        <input type="email" id="q5" name="email" placeholder="yourname@email.com">
-        <div class="btn-container">
-          <button type="button" class="btn btn-prev" onclick="prevQuestion(5)">&larr; Back</button>
-          <button type="submit" class="btn btn-submit">Submit & Get Early Access</button>
-        </div>
+  <div class="question" id="q4-container">
+    <label>
+      How much would you realistically pay for this per month?
+    </label>
+    <div class="radio-options">
+      <div class="radio-option">
+        <input type="radio" id="q4-free" name="price_point" value="$0 (free only)" required>
+        <label for="q4-free">$0 (free only)</label>
       </div>
-    </form>
+      <div class="radio-option">
+        <input type="radio" id="q4-5" name="price_point" value="$5">
+        <label for="q4-5">$5/month</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" id="q4-10" name="price_point" value="$10">
+        <label for="q4-10">$10/month</label>
+      </div>
+      <div class="radio-option">
+        <input type="radio" id="q4-15" name="price_point" value="$15+">
+        <label for="q4-15">$15+/month</label>
+      </div>
+    </div>
+    <div class="btn-container">
+      <button type="button" class="btn btn-prev" onclick="prevQuestion(4)">&larr; Back</button>
+      <button type="button" class="btn btn-next" onclick="nextQuestion(4)">Next &rarr;</button>
+    </div>
+  </div>
+
+  <div class="question" id="q5-container">
+    <label for="q5">Want free early access? Drop your email:</label>
+    <input type="email" id="q5" name="email" placeholder="yourname@email.com">
+    <div class="btn-container">
+      <button type="button" class="btn btn-prev" onclick="prevQuestion(5)">&larr; Back</button>
+      <button type="submit" class="btn btn-submit">Submit & Get Early Access</button>
+    </div>
+  </div>
+</form>
 
     <div class="thank-you" id="thank-you">
       <h2>Thanks for your feedback!</h2>
